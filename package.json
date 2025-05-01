@@ -1,0 +1,45 @@
+{
+	"name": "@cinderblock/ip",
+	"version": "0.1.0",
+	"description": "Node.js library replicating the Linux `ip` command functionality across platforms",
+	"author": "Cameron Tacklind <cameron@tacklind.com>",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist/linux.js"
+	],
+	"scripts": {
+		"build": "tsc",
+		"prepare": "npm run build",
+		"lint": "biome check"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cinderblock/node-ip.git"
+	},
+	"license": "MIT",
+	"keywords": [
+		"ip",
+		"linux",
+		"netlink",
+		"ifconfig",
+		"iproute2",
+		"ipconfig",
+		"network"
+	],
+	"os": [
+		"win32",
+		"darwin",
+		"linux"
+	],
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^22.15.3",
+		"prettier": "^3.5.3",
+		"typescript": "^5.8.3"
+	},
+	"optionalDependencies": {
+		"netlink": "^0.3.0"
+	}
+}
