@@ -6,9 +6,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist/linux.js"
-	],
+	"files": ["dist/linux.js"],
 	"scripts": {
 		"build": "tsc",
 		"prepare": "npm run build",
@@ -19,20 +17,8 @@
 		"url": "https://github.com/cinderblock/node-ip.git"
 	},
 	"license": "MIT",
-	"keywords": [
-		"ip",
-		"linux",
-		"netlink",
-		"ifconfig",
-		"iproute2",
-		"ipconfig",
-		"network"
-	],
-	"os": [
-		"win32",
-		"darwin",
-		"linux"
-	],
+	"keywords": ["ip", "linux", "netlink", "ifconfig", "iproute2", "ipconfig", "network"],
+	"os": ["win32", "darwin", "linux"],
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@types/node": "^22.15.3",
