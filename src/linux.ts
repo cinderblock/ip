@@ -57,7 +57,7 @@ export const LinuxNetworkManager: NetworkManager = {
 		throw new Error("Not yet implemented");
 	},
 
-	async newInterface(name: string): Promise<NetworkInterface | undefined> {
+	async createInterface(name: string): Promise<NetworkInterface | undefined> {
 		throw new Error("Not yet implemented");
 	},
 };

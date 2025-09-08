@@ -101,7 +101,7 @@ export async function filterInterfaces(
 export interface NetworkManager<T extends NetworkInterface = NetworkInterface> {
 	getInterfaces(filter?: SearchFilter): Promise<Map<string, T>>;
 
-	newInterface(name: string): Promise<T | undefined>;
+	createInterface(name: string): Promise<T | undefined>;
 }
 
 let nm: Promise<NetworkManager> | undefined | null;

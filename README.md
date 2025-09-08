@@ -24,8 +24,9 @@ getNetworkManager().then(networkManager => {
   console.log(newInterface);
 
   // Configure the interface
-  newInterface.configure({
-    ipAddress: "10.20.30.40/24", // Can be an array and/or IPv6
+  newInterface?.configure({
+    ipAddress: "10.20.30.40", // Can be an array and/or IPv6
+    prefix: 24,
     gateway: "10.20.30.1",
     vlanId: 69,
   });
