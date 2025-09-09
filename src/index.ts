@@ -19,20 +19,12 @@ export interface NetworkConfig {
 	interfaceName?: string;
 
 	/**
-	 * The static IP address to assign to the interface.
-	 * Used for static configuration. If omitted and dhcp is not set, interface may be manual.
+	 * The static IP address to assign to the interface, with CIDR notation.
+	 * Used for static configuration.
 	 * @default undefined
-	 * @example '192.168.1.10'
+	 * @example '192.168.1.10/24'
 	 */
 	ipAddress?: string | string[];
-
-	/**
-	 * Network prefix length (CIDR, e.g., 24 for 255.255.255.0).
-	 * Used with ip_address to form the subnet.
-	 * @default undefined
-	 * @example 24
-	 */
-	prefix?: number;
 
 	/**
 	 * Default gateway IP address for the interface.
