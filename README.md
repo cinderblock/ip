@@ -20,16 +20,26 @@ getNetworkManager().then(networkManager => {
   console.log(interfaces);
 
   // Create a new interface
-  const newInterface = networkManager.createInterface("eth0.10");
-  console.log(newInterface);
+  const myInterface = networkManager.createInterface("my.interface");
+  console.log(myInterface);
 
   // Configure the interface
-  newInterface?.configure({
+  myInterface?.configure({
     ipAddress: "10.20.30.40", // Can be an array and/or IPv6
     prefix: 24,
     gateway: "10.20.30.1",
-    vlanId: 69,
   });
+
+  const existingInterface = interfaces[0];
+
+  if (existingInterface) {
+    const vlanID = 69;
+    existingInterface.addVLAN(vlanID, {
+      ipAddress: "10.20.30.40", // Can be an array and/or IPv6
+      prefix: 24,
+      gateway: "10.20.30.1",
+    });
+  }
 });
 ```
 
