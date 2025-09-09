@@ -25,8 +25,7 @@ getNetworkManager().then(networkManager => {
 
   // Configure the interface
   myInterface?.configure({
-    ipAddress: "10.20.30.40", // Can be an array and/or IPv6
-    prefix: 24,
+    ipAddress: "10.20.30.40/24", // Can be an array and/or IPv6
     gateway: "10.20.30.1",
   });
 
@@ -35,8 +34,7 @@ getNetworkManager().then(networkManager => {
   if (existingInterface) {
     const vlanID = 69;
     existingInterface.addVLAN(vlanID, {
-      ipAddress: "10.20.30.40", // Can be an array and/or IPv6
-      prefix: 24,
+      ipAddress: "10.20.30.40/24", // Can be an array and/or IPv6
       gateway: "10.20.30.1",
     });
   }
